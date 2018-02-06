@@ -29,3 +29,7 @@ for i in dic_items:
 
 print('name' in dic)
 print('test' in dic)
+
+for k,v in dic.items():
+    print(k + '_' + v)
+    
