@@ -9,6 +9,7 @@ by daltago87
 
 import threading, requests, time
  
+#메서드로 스레드 실행
 def getHtml(url):
     resp = requests.get(url)
     time.sleep(1)
@@ -17,9 +18,9 @@ def getHtml(url):
 t1 = threading.Thread(target=getHtml, args=('http://google.com',))
 t1.start()
  
-print("### End ###")
+print("### t1 End ###")
 
- 
+#클래스로 스레드 실행
 class HtmlGetter (threading.Thread):
     def __init__(self, url):
         threading.Thread.__init__(self) 
@@ -33,4 +34,4 @@ class HtmlGetter (threading.Thread):
 t = HtmlGetter('http://google.com')
 t.start()
  
-print("### End ###")
+print("### t End ###")
