@@ -2,6 +2,8 @@
 dictionary.py
 2018/01/28
 by daltago87
+
+
 '''
 
 dic = {'name':'sophia', 'phone':'01041307623', 'birth':'0704'}
